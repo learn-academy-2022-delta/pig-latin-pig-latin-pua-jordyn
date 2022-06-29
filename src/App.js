@@ -37,13 +37,17 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
-const inputWord = (string) => {
-  if(string[0] !== str.search([aeiou])) {
+const inputWord = (string) => { 
+  if(string[0] !== string.search(/[aeiou]/g)) {
+    return (string.charAt(1) + string.substring(2) + string[0] + "ay")
+  } else if(string[0] === string.search(/[aeiou]/g)) {
     return (string + "way")
-  } else if(string[0] === str.search([aeiou])) {
-    return (string + "ay")
+  } else if(string.slice[0, 2] === "qu") {
+    return (string.slice(2) + string.slice(0,2) + "ay") 
+  } else if(string[0, 1] !== string.search(/[y]/g)) {
+    return ("y" + string.charAt[1, 2] + string.substring[1, 2])
   } else {
-    return ("CurrentWord is not a word")
+    return ("This is not a word")
   }
 }
     //  Rules of Pig Latin
@@ -73,8 +77,8 @@ let translatePigLatin =(str) =>  {
     }
 }
 console.log(translatePigLatin("apple"))
-console.log(translatePigLatin(this.state.phrase))
-console.log(translatePigLatin(this.state.phraseTranslated))
+//console.log(translatePigLatin(this.state.phrase))
+//console.log(translatePigLatin(this.state.phraseTranslated))
 
       // Remember: console.log is your friend :)
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
