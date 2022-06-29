@@ -37,7 +37,15 @@ class App extends Component {
       console.log("vowelsArray:", vowelsArray)
 
       // your code here!
-
+const inputWord = (string) => {
+  if(string[0] !== str.search([aeiou])) {
+    return (string + "way")
+  } else if(string[0] === str.search([aeiou])) {
+    return (string + "ay")
+  } else {
+    return ("CurrentWord is not a word")
+  }
+}
     //  Rules of Pig Latin
 // For words beginning with a vowel, add "way" to the end.
 // For words beginning with one or more consonants, move all of the first consecutive consonants to the end, and add "ay".
@@ -65,8 +73,8 @@ let translatePigLatin =(str) =>  {
     }
 }
 console.log(translatePigLatin("apple"))
-//console.log(translatePigLatin(this.state.phrase))
-//console.log(translatePigLatin(this.state.phraseTranslated))
+console.log(translatePigLatin(this.state.phrase))
+console.log(translatePigLatin(this.state.phraseTranslated))
 
       // Remember: console.log is your friend :)
       // ACTION ITEM: change the value of currentWord to the name of whatever variable you made containing your Pig Latin'd word
@@ -87,8 +95,8 @@ console.log(translatePigLatin("apple"))
     // this method restarts the game by setting the original state
     // ACTION ITEM: when you are ready for your full user experience, delete the test words in phrase so that is assigned an empty string
     this.setState({
-      phrase: "alpha through yummy squeal queen fry",
-      phraseTranslated: "This is where your translated sentence will appear."
+      phrase: "alpha through yummy squeal queen",
+      phraseTranslated: "This is the translated phrase"
     })
   }
 
